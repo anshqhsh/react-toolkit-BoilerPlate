@@ -1,15 +1,12 @@
-import axios from "axios";
+import axios from 'axios';
 // config
-import { HOST_API } from "../config";
 
 // ----------------------------------------------------------------------
 
-export const basePath =
-  process.env.NODE_ENV === "production" ? HOST_API.production : HOST_API.dev;
+export const basePath = process.env.NODE_ENV;
 
 const $axios = axios.create({
   baseURL: basePath,
-  withCredentials: true,
 });
 
 export default $axios;
