@@ -1,8 +1,11 @@
+import { useSelector } from 'react-redux';
 import { Counter } from '../../components/Counter';
 
 import './App.css';
 
 function App() {
+  const todos = useSelector(state => state.todos);
+
   return (
     <div className="App">
       <header className="App-header">

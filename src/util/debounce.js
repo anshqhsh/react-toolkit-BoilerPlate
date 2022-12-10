@@ -1,4 +1,4 @@
-//https://jinhyukoo.github.io/web/2021/04/10/useDebounce.html
+// https://jinhyukoo.github.io/web/2021/04/10/useDebounce.html
 const useDebounce = (func, wait) => {
   let timeout;
   return (...args) => {
