@@ -4,7 +4,7 @@ import { addNumber, minusNumber } from '../../redux/modules/counter';
 
 import styles from './Counter.module.css';
 
-export function Counter() {
+const Counter = () => {
   const counter = useSelector(state => state.counter);
   console.log('counter', counter);
 
@@ -38,4 +38,5 @@ export function Counter() {
       </div>
     </div>
   );
-}
+};
+export default Counter;

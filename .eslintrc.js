@@ -28,5 +28,6 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'import/prefer-default-export': 'off',
     'no-param-reassign': ['error', { props: false }],
+    'react/function-component-definition': 'off',
   },
 };
