@@ -12,16 +12,11 @@ const Page1 = ({ type = 'edit' }) => {
 
   const editorRef = useRef(null);
 
-  console.log('rendering...');
-  console.log('content', content);
-
   const getHtmlContent = useCallback(() => {
     const tmpContent = localStorage.getItem('content');
     setcontent(tmpContent);
     console.log('effect', content);
   }, [content]);
-
-  console.log(editorRef);
 
   useEffect(() => {
     if (type === 'edit') {
@@ -30,7 +25,6 @@ const Page1 = ({ type = 'edit' }) => {
   }, [getHtmlContent, type]);
 
   const handleRegisterButton = () => {
-    console.log(editorRef);
     // 입력창에 입력한 내용을 HTML 태그 형태로 취득
     console.log(editorRef.current?.getInstance().getHTML());
     // 입력창에 입력한 내용을 MarkDown 형태로 취득
@@ -58,7 +52,7 @@ const Page1 = ({ type = 'edit' }) => {
             ['heading', 'bold', 'italic', 'strike'],
             ['hr', 'quote'],
             ['ul', 'ol', 'task', 'indent', 'outdent'],
-            // ['table', 'image', 'link'],
+            // ['table', 'image', 'link'], 이미지 업로드 기능이 없어서 주석처리
             ['code', 'codeblock'],
           ]}
         />
