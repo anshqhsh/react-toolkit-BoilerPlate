@@ -16,3 +16,5 @@
 - Vscode extention Eslint, prettier 설치
 
 - 추가된 기능 목록
+
+- React Query : https://tanstack.com/query/latest/docs/react/overview
